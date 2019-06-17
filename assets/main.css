@@ -1,0 +1,439 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    font-size: 12px;
+}
+
+main{
+
+    width: 100%;
+    height: 100%;
+}
+
+
+.page-container{
+    position:absolute;
+    height: 75vh;
+    width: 150vh;
+    background-image:linear-gradient(to top , #4133C7,  #73FBAD);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 13px;
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.178); 
+    box-shadow: 0px 0px 50px 0px rgba(117, 122, 129, 0.61);
+}
+
+.sub-container{
+    position: relative;
+    width: 80vh;
+    height: 75vh;
+    background: #FFFFFF;
+    -webkit-border-radius: 0px 13px 13px 0px;
+    -moz-border-radius: 0px 13px 13px 0px;
+    border-radius: 0px 13px 13px 0px;
+    left: 46.89%;
+        
+}
+
+.logo{
+    position: absolute;
+    float: left;
+    padding: 30px;
+    left: 10%;
+    
+}
+
+.logo img{
+    width: 200px;
+    height: 150px;
+}
+
+a{
+    text-decoration: none;
+    color: #1D2226;
+    cursor: pointer;
+    padding: 30px;
+    
+}
+
+
+
+/* input[type="checkbox"]{
+    
+    width: 160px;
+    height: 50px;
+    -webkit-appearance: none;
+    background: #B9B9B9;
+    opacity: 20%;
+    outline:none;
+    border-radius: 30px;
+
+} */
+
+.radio-pillbox {
+    position: absolute;
+    margin-top: 5px;
+    /* margin-bottom: 100px; */
+    width: 170px;
+    height: 30px;
+    left: 50%;
+    top:30px;
+    transform: translate(-50%, -50%);
+    opacity: 20%;
+    /* font-size: 1px; */
+    border: 0;
+    border-radius: 75px;
+    overflow: hidden;
+    background: rgb(238, 238, 238);
+    /* box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); */
+  }
+  
+  .radio-pillbox radiogroup {
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+  
+  .radio-pillbox radiogroup div {
+    width: 100%;
+    position: relative;
+  }
+  
+  .radio-pillbox radiogroup div input {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 100%;
+    transition: background 300ms ease-out;
+    
+    /* margin: 0; */
+    /* outline: 0; */
+    /* border-left: 1px solid rgba(0, 0, 0, 0.05); */
+  }
+  
+  .radio-pillbox radiogroup div input:checked[type="radio"] {
+    background: #4AD285;
+    border: none;
+    border-radius: 20px;
+    box-shadow: inset 0 10px 50px rgba(25, 25, 25, 0.1);
+    
+  }
+  
+
+  .radio-pillbox radiogroup div label {
+    position: absolute;
+    top: 50%; /* top plus line-height centers text */
+    line-height: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  
+  
+  .radio-label {
+    
+    color: rgb(187, 185, 185) ;
+
+  }
+  
+  .radio-pillbox input:checked + label {
+      color: white;
+}
+
+
+.Signup-form {
+    
+    position: relative;
+    top: 58%;
+    left: 62%;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+.Signup-form input{
+    
+    display: block;
+    margin-bottom:20px;
+    padding: 7px;
+    border-radius: 30px;
+    border: 1px solid #E7E7E7;
+    width: 70%;
+    font-size: 12px;
+    opacity: 20%;
+    padding-left: 39px;
+    animation-name: FromRight;
+    animation-duration: .5s;
+}
+
+.Signup-form a{
+    padding-left: 0;
+}
+
+.Signup-form .username-input i{
+    animation-name: FromRight;
+    animation-duration: .5s;
+}
+
+.Signup-form .email-input i{
+    animation-name: FromRight;
+    animation-duration: .5s;
+
+}
+
+.Signup-form .password-input i{
+    animation-name: FromRight;
+    animation-duration: .5s;
+
+}
+
+
+
+@keyframes FromRight{
+
+    from{
+        transform: translateX(220px);
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes FromLeft{
+
+    from{
+        transform: translateX(-220px);
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+
+
+.Signup-form input:focus{
+    box-shadow:  0 0px 5px #5687BC;
+}
+
+.Signup-form input:focus + i{
+   color: #5687BC;
+   
+}
+
+i{
+    color:rgb(197, 196, 196) ;
+}
+
+.username-input i {
+    position: absolute;
+    left: 25px;
+    top: 28px;
+    padding-left: 10px;
+    
+}
+
+.email-input i {
+    position: absolute;
+    left: 25px;
+    top: 80px;
+    padding-left: 10px;
+}
+
+.password-input i {
+    position: absolute;
+    left: 25px;
+    top: 130px;
+    padding-left: 10px;
+}
+
+.facebook-input  button{
+    padding: 8px;
+    border-radius: 20px;
+    width: 80%;
+    background: white;
+    border: 1px solid #E7E7E7;
+    margin-bottom:20px;
+    text-align: left;
+    padding-left: 16px;
+    font-size: 12px;
+    color: rgb(122, 122, 122) ;
+    animation-name: FromRight;
+    animation-duration: .5s;
+    
+}
+
+.facebook-input button a{
+    color:rgb(122, 122, 122);
+}
+
+.google-input button a{
+    color:rgb(122, 122, 122);
+}
+.facebook-input i{
+    color: #3B5998;
+    
+}
+.google-input i{
+    color: rgb(255, 99, 71)
+}
+
+.google-input  button{
+    padding: 8px;
+    border-radius: 20px;
+    width: 80%;
+    background: white;
+    border: 1px solid #E7E7E7;
+    margin-bottom:20px;
+    text-align: left;
+    padding-left: 16px;
+    font-size: 12px;
+    color: rgb(122, 122, 122) ;
+    animation-name: FromRight;
+    animation-duration: .5s;
+    
+}
+
+.terms{
+    position: relative;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #8A9EAD;
+    padding-right: 80px;
+    text-align: center;
+    left: 0;
+    margin-bottom: 20px;
+    animation-name: FromRight;
+    animation-duration: .5s;
+    
+}
+
+.terms .terms-link a{
+    font-family: sans-serif;
+    color:#FFCA00;
+    font-size: 12px;
+    display: block;
+    padding: 0;
+}
+
+
+.submit{
+    position: relative;
+    padding-left: 46px;
+}
+
+.submit:hover{
+    transform: translateY(-3px);
+    
+}
+
+input[type="submit"]{
+    text-align: center;
+    padding: 11px;
+    color: #FFFFFF;
+    background: #4133C7
+}
+
+
+
+.submit input[type="submit"]{
+    text-align: center;
+    padding: 11px;
+    color: #FFFFFF;
+    background: #4133C7
+}
+.sub-container-login{
+    position: absolute;
+    width: 80vh;
+    height: 75vh;
+    background: #FFFFFF;
+    -webkit-border-radius: 0px 13px 13px 0px;
+    -moz-border-radius: 0px 13px 13px 0px;
+    border-radius: 0px 13px 13px 0px;
+    left: 46.89%;
+    top: 0;
+}
+
+.sub-container-login .Signup-form .password-input i{
+    top: 82px;
+}
+
+
+
+/* ///////////////////////////////////////////////////////////////////// */
+
+
+.Login-form {
+    
+    position: relative;
+    top:48%;
+    left: 62%;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+
+.Login-form input{
+    
+    display: block;
+    margin-bottom:20px;
+    padding: 7px;
+    border-radius: 30px;
+    border: 1px solid #E7E7E7;
+    width: 70%;
+    font-size: 12px;
+    opacity: 20%;
+    padding-left: 39px;
+    animation-name: FromLeft;
+    animation-duration: .5s;
+}
+
+.Login-form a{
+    padding-left: 0;
+    animation-name: FromRight;
+    animation-duration: .5s;
+}
+
+.Login-form .password-input i{
+    top: 27%;
+    animation-name: FromLeft;
+    animation-duration: .5s;
+}
+
+.Login-form .username-input i{
+    animation-name: FromLeft;
+    animation-duration: .5s;
+}
+
+.Login-form  button{
+    animation-name: FromLeft;
+    animation-duration: .5s;
+
+}
+
+
+.Login-form input:focus{
+    box-shadow:  0 0px 5px #5687BC;
+}
+
+.Login-form input:focus + i{
+   color: #5687BC;
+   
+}
+.sub-container-login .Login-form .password-input i{
+    top: 82px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////// */
+
+.facebook-input a{
+    offset: 0;
+}
+.google-input a{
+    offset: 
+}
