@@ -54,23 +54,9 @@ passport.use('local-login', new LocalStrategy({
 
 app.post('/', passport.authenticate('local-login', {
 
-    // successRedirect : '/profile', // redirect to the secure profile section
-    // failureRedirect : '/', // redirect back to the signup page if there is an error
-    // failureFlash : true // allow flash messages
-
-    passport.use('local-login', new LocalStrategy({
-
-    function(username, password, done){
-        User.findOne({usermane: username}).then((err, user) =>{
-            if (err) { return done(err);}
-            if (!user) { return done(null, false); }
-            if (!user.verifyPassword(password)) { return done(null, false); }
-            return done(null, user);
-        })
-    }
-
-}))
-
+    successRedirect : '/profile', // redirect to the secure profile section
+    failureRedirect : '/', // redirect back to the signup page if there is an error
+    failureFlash : true // allow flash messages
 
 }));
 
