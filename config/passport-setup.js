@@ -24,7 +24,7 @@ passport.use(new GoogleStrategy({
 
         process.nextTick(() =>{
         //    console.log(profile); 
-            User.findOne({googleId:profile.id}.then((currentUser) =>{
+            User.findOne({googleId:profile.id}).then((currentUser) =>{
                 if(currentUser){
                     console.log('user in the system ', currentUser);
                 }
