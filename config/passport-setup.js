@@ -24,20 +24,21 @@ passport.use(new GoogleStrategy({
 
         process.nextTick(() =>{
         //    console.log(profile); 
-            User.findOne({googleId:profile.id}).then((currentUser) =>{
-                if(currentUser){
-                    console.log('user in the system ', currentUser);
+        User.findOne({googleId:profile.id}.then((currentUser) =>{
+            if(currentUser){
+                console.log('user in the system ', currentUser);
+            }
+            else{
+                new User({
+                    username: profile.displayName,
+                    id: profile.id,
+                    email: (profile.emails[0].value || '').toLowerCase(),
+                }).save().then((newUser) =>{
+                    console.log('new User created ', newUser);
                 }
-                else{
-                    new User({
-                        username: profile.displayName,
-                        id: profile.id,
-                        email: (profile.emails[0].value || '').toLowerCase(),
-                    }).save().then((newUser) =>{
-                        console.log('new User created ', newUser);
-                    });
-                }
-            }));
+            }
+        }))
+            
         });
     }
 ));
