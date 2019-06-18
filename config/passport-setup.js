@@ -1,4 +1,5 @@
 const passport = require('passport');
+var LocalStrategy    = require('passport-local').Strategy;
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const mongoose = require('mongoose');
 
@@ -6,6 +7,7 @@ const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
     username: String,
+    password: String,
     googleId: String,
     email: String,
 })
@@ -52,3 +54,5 @@ passport.use(new GoogleStrategy({
         });
     }
 ));
+
+
